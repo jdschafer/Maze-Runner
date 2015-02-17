@@ -1,5 +1,12 @@
+/*@author		Justin Schafer
+@id				jdschafer
+@course			CSIS 252
+@assignment		Maze Runner Lab 2
+@related		Stack.java
+@included		N/A
+*/
+
 import java.util.*;
-//import lejos.nxt.*;
 
 public class Robot extends Stack {
 	
@@ -43,9 +50,9 @@ public class Robot extends Stack {
 		
 		while(!stack.isEmpty()) {
 			temp = (String) stack.pop();
-			if(temp.equals("r"))
+			if(temp.equalsIgnoreCase("r"))
 				System.out.println("l");
-			else if(temp.equals("l"))
+			else if(temp.equalsIgnoreCase("l"))
 				System.out.println("r");
 			else System.out.println(temp);
 		}

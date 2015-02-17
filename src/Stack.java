@@ -1,3 +1,10 @@
+/*@author		Justin Schafer
+@id				jdschafer
+@course			CSIS 252
+@assignment		Maze Runner Lab 2
+@related		Robot.java
+@included		N/A
+*/
 
 public class Stack {
 	
@@ -11,6 +18,8 @@ public class Stack {
 	}
 	
 	public void push(Object move) {
+		if(isFull())
+			return;
 		stack[top + 1] = move;
 		top++;
 	}
@@ -32,6 +41,12 @@ public class Stack {
 	
 	public boolean isEmpty() {
 		if(top == -1)
+			return true;
+		else return false;
+	}
+	
+	public boolean isFull() {
+		if(top == MAX)
 			return true;
 		else return false;
 	}
